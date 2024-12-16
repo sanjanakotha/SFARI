@@ -1,0 +1,9 @@
+data/temp*
+hg38
+data/iWES_v2.gatk.pvcf_variants.tsv
+data/SFARI_variants.bed
+soto_analysis/raw_files*
+soto_analysis/output*
+data/K562_encode_rna_expression_report_2023_7_26_21h_21m.tsv
+data
+output

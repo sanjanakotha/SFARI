@@ -1,0 +1,220 @@
+---
+title: "Mapping Genomic Coordinates"
+output: html_notebook
+---
+
+```{r}
+library(ensembldb)
+library(EnsDb.Hsapiens.v86)
+edbx <- EnsDb.Hsapiens.v86
+```
+
+```{r}
+SFARI_TF_AA_coords <- read.csv("~/Desktop/Staller_Lab/SFARI/data/SFARI_TFs_with_knownADs_coords_ENST.csv")
+print(SFARI_TF_AA_coords)
+```
+
+```{r}
+folder <- "test"
+uniprotID <- "Test"
+savefilepath <- paste("~/Desktop/Staller_Lab/SFARI/soto_analysis/outputs/mutations/", folder, "/", uniprotID, ".bed", sep = "")
+savefilepath
+```
+
+```{r}
+rng_tx <- IRanges(start = c(501, 1), width = c(5, 5),
+                  names = c("ENST00000486554", "ENST00000381578"))
+
+rng_gnm <- transcriptToGenome(rng_tx, edbx)
+```
+
+```{r}
+rng_gnm
+```
+
+```{r}
+uni_rng <- IRanges(start = 1, end = 707,
+                   names = "ENSP00000363822")
+uni_gnm <- proteinToGenome(uni_rng, edbx)
+```
+
+```{r}
+uni_gnm
+```
+
+```{r}
+## Choosing one transcript if there are > 1 transcript for the uniprotID
+if(length(uni_gnm[[1]]) > 1) {
+  uni_gnm[[1]] = unlist(GRangesList(uni_gnm[[1]][1]))
+}
+  
+gr <- unlist(GRangesList(uni_gnm))
+gr
+```
+
+```{r}
+df <- data.frame(seqnames=seqnames(gr),
+                   starts=start(gr)-1,
+                   ends=end(gr),
+                   names=elementMetadata(gr)[,1],
+                   ensts=elementMetadata(gr)[,2],
+                   strands=strand(gr))
+df
+```
+
+```{r}
+elementMetadata(gr)[,2]
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+unlist(uni_gnm[[1]][1])
+```
+
+```{r}
+uni_gnm_copy <- uni_gnm
+for (i in 1:length(uni_gnm_copy)) {
+  ## Choosing one transcript if there are > 1 transcript for a uniprotID
+  if(length(uni_gnm_copy[[i]]) > 1) {
+    uni_gnm_copy[[i]] = unlist(GRangesList(uni_gnm_copy[[i]][1]))
+  }
+}
+gr <- unlist(GRangesList(uni_gnm_copy))
+```
+
+```{r}
+## Saving as a bed file
+df <- data.frame(seqnames=seqnames(gr),
+  starts=start(gr)-1,
+  ends=end(gr),
+  names=elementMetadata(gr)[,1],
+  scores=c(rep(".", length(gr))),
+  strands=strand(gr))
+
+write.table(df, "../data/SFARI_TFs_R.bed", quote=F, sep="\t", row.names=F, col.names=F)
+```
+
+```{r}
+SFARI_TF_AA_coords$End
+```
+
+```{r}
+test_rng <- IRanges(start = c(1), end = c(951),
+                   names = c("Q6P1N0"))
+test_gnm <- proteinToGenome(test_rng, edbx, idType = "uniprot_id")
+test_gnm
+```
+
+```{r}
+test_gnm[[1]][1]
+```
+
+```{r}
+test_gnm[[1]][2]
+```
+
+```{r}
+uniprotID_to_genomic_coord_bed <- function(uniprotID, start, end, folder) { 
+  uni_rng <- IRanges(start = start, end = end,
+                     names = uniprotID)
+  uni_gnm <- proteinToGenome(uni_rng, edbx, idType = "uniprot_id")
+
+  ## Choosing one transcript if there are > 1 transcript for the uniprotID
+  if(length(uni_gnm[[1]]) > 1) {
+    uni_gnm[[1]] = unlist(GRangesList(uni_gnm[[1]][1]))
+  }
+  
+  gr <- unlist(GRangesList(uni_gnm))
+  df <- data.frame(seqnames=seqnames(gr),
+                   starts=start(gr)-1,
+                   ends=end(gr),
+                   names=elementMetadata(gr)[,1],
+                   scores=c(rep(".", length(gr))),
+                   strands=strand(gr))
+  
+  savefilepath <- paste("~/Desktop/Staller_Lab/SFARI/soto_analysis/outputs/mutations/",  
+                        folder, "/", uniprotID, ".bed", sep = "")
+  write.table(df, savefilepath, quote=F, sep="\t", row.names=F, col.names=F)
+}
+```
+
+```{r}
+uniprotID_to_genomic_coord_bed("Q9Y4A8", 251, 450, "domains_bed_format")
+```
+
+```{r}
+1/3 * (26183784 - 26183700)
+```
+
+```{r}
+1/3 * (26183784 - 26183700 + 26185048 - 26184532)
+```
+
+```{r}
+uni_rng1 <- IRanges(start = 251, end = 400,
+                   names = "Q9Y4A8")
+uni_gnm1 <- proteinToGenome(uni_rng1, edbx, idType = "uniprot_id")
+```
+
+```{r}
+uni_rng2 <- IRanges(start = 1, end = 100,
+                   names = "O75840")
+uni_gnm2 <- proteinToGenome(uni_rng2, edbx, idType = "uniprot_id")
+```
+
+```{r}
+length(GRangesList(uni_gnm1[[1]]))
+```
+
+```{r}
+length(GRangesList(uni_gnm2[[1]]))
+```
+
+\
+
+```{r}
+
+```
+
+```{r}
+typeof(uni_gnm[1])
+```
+
+```{r}
+unlist(GRangesList(uni_gnm[[1]][1]))
+```
+
+```{r}
+## Choosing one transcript if there are > 1 transcript for the uniprotID
+if(typeof(uni_gnm[1]) == "list") {
+  uni_gnm[[1]] = unlist(GRangesList(uni_gnm[[1]][1]))
+}
+  
+gr <- unlist(GRangesList(uni_gnm))
+df <- data.frame(seqnames=seqnames(gr),
+                   starts=start(gr)-1,
+                   ends=end(gr),
+                   names=elementMetadata(gr)[,1],
+                   scores=c(rep(".", length(gr))),
+                   strands=strand(gr))
+df
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
