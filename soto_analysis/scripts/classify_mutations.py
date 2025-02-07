@@ -401,7 +401,3 @@ for file in files:
 #             elif wt_aa != mt_aa and mt_aa == "*":
 #                 line.append("NoSense")
 #             o1.write("\t".join(line) + "\n")
-
-
-
-

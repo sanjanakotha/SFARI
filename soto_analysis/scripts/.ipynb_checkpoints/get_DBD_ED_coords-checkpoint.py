@@ -16,7 +16,7 @@ directory = "../outputs/mutations/cds_bed_format"
 files = os.listdir(directory)
 
 import sys
-with open("../outputs/TFs_table_proteins.txt") as f1:
+with open("../outputs/all_TFs_table_proteins.txt") as f1:
     f1.readline()
     for line in f1:
         line = line.rstrip().split("\t")
