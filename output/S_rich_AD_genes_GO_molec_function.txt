@@ -1,0 +1,94 @@
+
+
+
+
+
+Analysis Type:	PANTHER Overrepresentation Test (Released 20240807)
+Annotation Version and Release Date:	GO Ontology database DOI:  10.5281/zenodo.12173881 Released 2024-06-17
+Analyzed List:	upload_1 (Homo sapiens)
+Reference List:	Homo sapiens (all genes in database)
+Test Type:	FISHER
+Correction:	FDR
+GO molecular function complete	Homo sapiens - REFLIST (20580)	upload_1 (152)	upload_1 (expected)	upload_1 (over/under)	upload_1 (fold Enrichment)	upload_1 (raw P-value)	upload_1 (FDR)
+vitamin D response element binding (GO:0070644)	3	3	.02	+	 > 100	3.95E-07	4.89E-05
+histone H2AXY142 phosphatase activity (GO:0140793)	3	2	.02	+	90.26	1.62E-04	1.22E-02
+histone phosphatase activity (GO:0140789)	3	2	.02	+	90.26	1.62E-04	1.21E-02
+minor groove of adenine-thymine-rich DNA binding (GO:0003680)	10	5	.07	+	67.70	5.03E-09	7.73E-07
+retinoic acid-responsive element binding (GO:0044323)	6	3	.04	+	67.70	7.77E-06	8.76E-04
+TFIIB-class transcription factor binding (GO:0001093)	4	2	.03	+	67.70	3.22E-04	2.18E-02
+HMG box domain binding (GO:0071837)	13	5	.10	+	52.07	2.52E-08	3.46E-06
+RNA polymerase II intronic transcription regulatory region sequence-specific DNA binding (GO:0001162)	8	3	.06	+	50.77	2.15E-05	2.14E-03
+estrogen response element binding (GO:0034056)	11	4	.08	+	49.23	9.07E-07	1.09E-04
+intronic transcription regulatory region sequence-specific DNA binding (GO:0001161)	11	4	.08	+	49.23	9.07E-07	1.07E-04
+nuclear glucocorticoid receptor binding (GO:0035259)	12	3	.09	+	33.85	8.28E-05	7.11E-03
+nuclear steroid receptor activity (GO:0003707)	25	6	.18	+	32.49	2.32E-08	3.27E-06
+E-box binding (GO:0070888)	59	14	.44	+	32.13	7.81E-18	1.80E-15
+nuclear receptor activity (GO:0004879)	59	13	.44	+	29.83	3.49E-16	7.70E-14
+ligand-activated transcription factor activity (GO:0098531)	60	13	.44	+	29.34	4.43E-16	9.36E-14
+C2H2 zinc finger domain binding (GO:0070742)	14	3	.10	+	29.01	1.35E-04	1.04E-02
+DNA binding, bending (GO:0008301)	19	4	.14	+	28.50	1.02E-05	1.05E-03
+acetylation-dependent protein binding (GO:0140033)	26	5	.19	+	26.04	1.19E-06	1.38E-04
+nuclear retinoid X receptor binding (GO:0046965)	17	3	.13	+	23.89	2.49E-04	1.75E-02
+DNA-binding transcription activator activity (GO:0001216)	482	79	3.56	+	22.19	1.65E-88	5.96E-86
+DNA-binding transcription activator activity, RNA polymerase II-specific (GO:0001228)	476	78	3.52	+	22.19	3.07E-87	1.04E-84
+lysine-acetylated histone binding (GO:0070577)	25	4	.18	+	21.66	3.21E-05	3.07E-03
+RNA polymerase II core promoter sequence-specific DNA binding (GO:0000979)	19	3	.14	+	21.38	3.51E-04	2.34E-02
+DNA secondary structure binding (GO:0000217)	39	5	.29	+	17.36	9.67E-06	1.04E-03
+histone acetyltransferase binding (GO:0035035)	24	3	.18	+	16.92	7.13E-04	4.52E-02
+bHLH transcription factor binding (GO:0043425)	32	4	.24	+	16.92	8.76E-05	7.40E-03
+nuclear retinoic acid receptor binding (GO:0042974)	25	3	.18	+	16.25	8.06E-04	4.99E-02
+transcription coregulator binding (GO:0001221)	114	13	.84	+	15.44	2.64E-12	4.79E-10
+transcription coactivator binding (GO:0001223)	44	5	.32	+	15.39	1.77E-05	1.80E-03
+chromatin DNA binding (GO:0031490)	141	15	1.04	+	14.40	1.45E-13	2.72E-11
+RNA polymerase II cis-regulatory region sequence-specific DNA binding (GO:0000978)	1195	122	8.83	+	13.82	3.80E-123	9.62E-120
+RNA polymerase II-specific DNA-binding transcription factor binding (GO:0061629)	343	35	2.53	+	13.82	5.68E-30	1.52E-27
+cis-regulatory region sequence-specific DNA binding (GO:0000987)	1219	122	9.00	+	13.55	4.72E-122	7.97E-119
+general transcription initiation factor binding (GO:0140296)	53	5	.39	+	12.77	4.44E-05	4.17E-03
+DNA-binding transcription factor activity, RNA polymerase II-specific (GO:0000981)	1382	125	10.21	+	12.25	1.27E-120	7.14E-118
+promoter-specific chromatin binding (GO:1990841)	67	6	.49	+	12.12	1.01E-05	1.07E-03
+RNA polymerase II transcription regulatory region sequence-specific DNA binding (GO:0000977)	1411	126	10.42	+	12.09	2.65E-121	3.36E-118
+DNA-binding transcription factor activity (GO:0003700)	1473	126	10.88	+	11.58	7.06E-119	2.98E-116
+transcription cis-regulatory region binding (GO:0000976)	1510	128	11.15	+	11.48	3.70E-121	3.76E-118
+transcription regulatory region nucleic acid binding (GO:0001067)	1512	128	11.17	+	11.46	4.41E-121	3.73E-118
+DNA-binding transcription repressor activity (GO:0001217)	273	23	2.02	+	11.41	5.81E-18	1.40E-15
+DNA-binding transcription factor binding (GO:0140297)	478	40	3.53	+	11.33	6.50E-31	1.83E-28
+basal RNA polymerase II transcription machinery binding (GO:0001099)	60	5	.44	+	11.28	8.10E-05	7.21E-03
+basal transcription machinery binding (GO:0001098)	60	5	.44	+	11.28	8.10E-05	7.08E-03
+sequence-specific double-stranded DNA binding (GO:1990837)	1573	129	11.62	+	11.10	1.14E-120	7.22E-118
+transcription factor binding (GO:0008134)	600	49	4.43	+	11.06	1.16E-37	3.45E-35
+sequence-specific DNA binding (GO:0043565)	1684	134	12.44	+	10.77	3.59E-126	1.82E-122
+DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227)	264	21	1.95	+	10.77	5.70E-16	1.16E-13
+double-stranded DNA binding (GO:0003690)	1668	131	12.32	+	10.63	5.29E-121	3.83E-118
+nuclear receptor binding (GO:0016922)	136	10	1.00	+	9.96	6.88E-08	9.19E-06
+transcription regulator activity (GO:0140110)	1972	136	14.56	+	9.34	1.54E-120	7.82E-118
+SMAD binding (GO:0046332)	78	5	.58	+	8.68	2.81E-04	1.93E-02
+chromatin binding (GO:0003682)	624	36	4.61	+	7.81	3.17E-22	8.03E-20
+DNA binding (GO:0003677)	2518	143	18.60	+	7.69	2.82E-119	1.30E-116
+histone modifying activity (GO:0140993)	208	9	1.54	+	5.86	2.49E-05	2.43E-03
+nucleic acid binding (GO:0003676)	4010	146	29.62	+	4.93	1.02E-95	3.97E-93
+protein domain specific binding (GO:0019904)	652	22	4.82	+	4.57	2.79E-09	4.71E-07
+protein heterodimerization activity (GO:0046982)	319	10	2.36	+	4.24	1.34E-04	1.04E-02
+zinc ion binding (GO:0008270)	851	23	6.29	+	3.66	7.28E-08	9.47E-06
+protein dimerization activity (GO:0046983)	1066	28	7.87	+	3.56	4.18E-09	6.62E-07
+transcription coregulator activity (GO:0003712)	504	13	3.72	+	3.49	9.69E-05	7.80E-03
+organic cyclic compound binding (GO:0097159)	6040	146	44.61	+	3.27	1.09E-69	3.44E-67
+protein-containing complex binding (GO:0044877)	1764	38	13.03	+	2.92	1.17E-09	2.04E-07
+transition metal ion binding (GO:0046914)	1125	23	8.31	+	2.77	8.73E-06	9.63E-04
+protein binding (GO:0005515)	14060	135	103.84	+	1.30	3.93E-09	6.42E-07
+binding (GO:0005488)	16418	152	121.26	+	1.25	1.93E-15	3.77E-13
+molecular_function (GO:0003674)	18198	152	134.41	+	1.13	1.19E-08	1.77E-06
+catalytic activity (GO:0003824)	5585	15	41.25	-	.36	1.92E-07	2.44E-05
+carbohydrate derivative binding (GO:0097367)	2270	4	16.77	-	.24	2.19E-04	1.59E-02
+heterocyclic compound binding (GO:1901363)	2285	4	16.88	-	.24	2.22E-04	1.59E-02
+hydrolase activity (GO:0016787)	2437	4	18.00	-	.22	7.14E-05	6.58E-03
+purine ribonucleotide binding (GO:0032555)	1892	3	13.97	-	.21	5.86E-04	3.81E-02
+ribonucleotide binding (GO:0032553)	1909	3	14.10	-	.21	5.99E-04	3.84E-02
+purine nucleotide binding (GO:0017076)	1985	3	14.66	-	.20	2.78E-04	1.93E-02
+molecular function regulator activity (GO:0098772)	2112	3	15.60	-	.19	1.31E-04	1.04E-02
+nucleotide binding (GO:0000166)	2150	3	15.88	-	.19	8.92E-05	7.29E-03
+nucleoside phosphate binding (GO:1901265)	2151	3	15.89	-	.19	8.91E-05	7.41E-03
+transmembrane signaling receptor activity (GO:0004888)	1322	1	9.76	-	.10	7.47E-04	4.68E-02
+transmembrane transporter activity (GO:0022857)	1128	0	8.33	-	 < 0.01	4.31E-04	2.84E-02
+enzyme regulator activity (GO:0030234)	1325	0	9.79	-	 < 0.01	7.86E-05	7.12E-03
+Unclassified (UNCLASSIFIED)	2382	0	17.59	-	 < 0.01	1.19E-08	1.72E-06
+transporter activity (GO:0005215)	1240	0	9.16	-	 < 0.01	1.93E-04	1.42E-02

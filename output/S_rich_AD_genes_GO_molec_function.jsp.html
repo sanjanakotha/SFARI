@@ -1,0 +1,2962 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H47X4K6P6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9H47X4K6P6');
+        </script>
+
+        <link href="/css/style.css" type="text/css" rel="stylesheet">
+
+        
+        <!--Include additional css, etc-->
+        
+        
+    </head>
+<div id="header">
+    <body bgcolor="#ffffff" leftmargin=0 topmargin=0 marginwidth="0" marginheight="0" onload="javascript:setSelection();">
+        <!-- Nav Bar -->
+        <table width="915" cellpadding=0 cellspacing=0>
+            <tr><td colspan=8 >
+                    <table cellpadding=2 cellspacing=0 width="100%" border=0>
+                        <TR>
+                            <td rowspan=2 colspan=8 valign=middle align="left">
+                                <DIV style=" padding: 5px 5px 5px 5px;vertical-align: middle;">
+                                    <DIV style="float:left; display:table-cell; vertical-align: middle; text-align: center; padding: 10px 20px 5px 5px;">
+                                        <a href="/" target="_top"><img src="/images/logos/Panther_logo.jpg" ></a>
+                                    </DIV>
+                                    <p  style="overflow:hidden;font-size:14px">The mission of the PANTHER knowledgebase is to support biomedical and other research by providing<BR> <b>comprehensive information about the evolution of protein-coding gene families</b>, particularly<BR> protein phylogeny, function and genetic variation impacting that function. <a href="/about.jsp">Learn more</a></p>
+                                </DIV>
+                            </td>
+
+                        </TR>
+                    </table>
+                </td>
+            </tr>
+            <TR>
+                <TD align = "left"><div><b>PANTHER19.0 Released.  <a href="/news/news20240620.jsp"> Click</a> for more details.</b></div></TD>
+            </TR>
+            <TR><TD>&nbsp;</TD></TR>
+            <TR>
+                <TD colspan=8 bgcolor="#F0F2F5" valign=middle align="left" >
+
+
+<form name="quicksearch" method=GET  onSubmit="javascript:submitQuickSearch();">
+  <input type="hidden" name="searchType" value="basic">
+  <input type="hidden" name="fieldName" value="all">
+  <input type="hidden" name="organism" value="all">
+<table align="left" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td nowrap height=25><input type="text" name="fieldValue" placeholder="search keyword" size=25 style="font-size:14px;" autofocus></td>
+    <td height=25>&nbsp;<select name="listType" style="font-size:14px;width:40">
+        <option selected value="-1">All</option>
+        <option  value="1">Genes and orthologs</option>
+        <option  value="8">Pathways</option>
+        <option  value="6">PANTHER families</option>
+        <option  value="5">Ontology terms</option>
+        </select>
+    </td>
+    <td>&nbsp;<a class="buttonblueexactsize" name="gobutton" href="javascript:submitQuickSearch();" style="font-size:14px">Go</a></td>
+  </tr>
+</table>
+ </form>
+                </TD>
+            </TR>            
+            <TR>
+                <TD colspan=5 bgcolor="#748CAD" height=25 align="left">
+                    <TABLE cellpadding=0 cellspacing=0 height="100%" >
+                        <TR>
+                            <td  bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabsSelected><A href="/" target="_top">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/about.jsp" target="_top">&nbsp;&nbsp;About&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/data/" target="_top">&nbsp;&nbsp;Data Version&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/tools/index.jsp" target="_top">&nbsp;&nbsp;Tools&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/services/index.jsp" target="_top">&nbsp;&nbsp;API&#47;Services&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/publications.jsp" target="_top">&nbsp;&nbsp;Publications&nbsp;&nbsp;</A>
+                            </TD>                                        
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/workspace/" target="_top">&nbsp;&nbsp;Workspace&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/downloads/index.jsp" target="_top">&nbsp;&nbsp;Downloads&nbsp;&nbsp;</A>
+                            </TD>
+                            <TD bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                            <TD nowrap class=headerTabs><a href="/help/PANTHERhelp.jsp" target="_top">&nbsp;&nbsp;FAQ&#47;Help&#47;Tutorial&nbsp;&nbsp;</A>
+                            </TD>
+
+
+
+                        </TR>
+                    </TABLE>
+                </TD>
+                    <TD colspan=3 bgcolor="#748CAD" height=25 align="right">
+                        <TABLE cellpadding=0 cellspacing=0 height="100%">
+                            <TR>
+                                
+                                <TD  bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                                <TD nowrap class=HeaderTabs><A href="/loginRequired.jsp?access=true" target="_top">&nbsp;&nbsp;Login&nbsp;&nbsp;</A>
+                                </TD>
+                                <TD  bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                                <TD nowrap class=HeaderTabs><A href="/registration.jsp" target="_top">&nbsp;&nbsp;Register&nbsp;&nbsp;</A>
+                                </TD>
+    
+                                <TD  bgcolor="#B8C6D8" width=1><img width=1 src="/images/spacer.gif"></TD>
+                                <TD nowrap class=HeaderTabs><a target="_top" href="/feedback.jsp">&nbsp;&nbsp;Contact us&nbsp;&nbsp;</A>
+                                </TD>                                        
+
+                            </TR>
+                        </TABLE>                            
+                    </TD>
+
+            </TR>
+                
+
+            <TR>
+                    <TD height=1 colspan=8 bgcolor="#B8C6D8"><img height=1 src="/images/spacer.gif"></TD>
+            </TR>
+        </table>
+                    
+
+                    
+        <table width="915" cellpadding=0 cellspacing=0 width="100%" border=0>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <!--<TD><div><b><a href="/data/index.jsp">PANTHER17.0 Released</a>.</b></div></TD>-->
+<!--                            <TD class=listResult valign=top>PANTHER version 17.0 contains
+                        <ul>
+                            <li>15,619 gene family phylogenetic trees -covering ~2 million genes</li>
+                            <li>from  different species across the tree of life. <a href="/panther/summaryStats.jsp">more</a></li>
+                        </ul>
+                    </TD>
+                    <TD class=listResult valign=top>Each gene is classified by
+                       <ul>
+                           <li>protein class</li>
+                           <li>protein family and subfamily</li>
+                           <li>function (GO terms, pathways)</li>
+                           <li><a href="/data/">more</a></li>
+                    </TD>  -->
+                    <TD align = "right" class="formLabel">
+                        Current Release: <a href="/news/news20240620.jsp"><b>PANTHER 19.0</a></b>&nbsp;&nbsp;|&nbsp;&nbsp;<b><a href="/panther/index.jsp">15,683</a></b> family phylogenetic trees&nbsp;&nbsp;|&nbsp;&nbsp;<b><a href="/panther/summaryStats.jsp">144</a></b> species&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/news/news20240620.jsp">News</a>&nbsp;&nbsp;<br><A href="/servlet/GenomeFunctionChartServlet?chartType=1&listType=1&annotType=5&species=Homo sapiens">Whole genome function views</A>&nbsp;&nbsp;  
+                    </TD>
+                </TR>
+        </table>
+    </div>                    
+                    <!-- end nav bar -->
+                    
+
+<script type="text/javascript" language="JavaScript" src="/js/cookie.js"></script>
+<script type="text/javascript" langague="javascript">
+    function submitForm () {
+        //should check that list has been selected
+        //also do validation so that if enter value into one box, 
+        //is entered in other box
+        if (document.listMappingResults.numUploaded.value == 0) {
+            alert("Please select at least one list to compare to the reference list");
+        }
+        else if (document.listMappingResults.type.value == "unselected") {
+            alert("Please select Annotation Data Set");            
+        }
+        else {
+            // Google event tracking
+//            _gaq.push(['_trackEvent', 'Tools', 'Compare To Ref List', document.listMappingResults.type.value]);
+            document.listMappingResults.submit();
+        }
+    }
+    
+        
+    function handleUserChoices() {
+        document.listMappingResults.saveUserChoices.value = "true";
+        document.listMappingResults.submit();
+    }
+    
+    function handleTestType() {
+        handleUserChoices();
+    }
+    
+    function handleCorType() {
+        handleUserChoices();        
+    }
+
+    function uploadRefFile () {
+        window.location="/tools/uploadRefFile.jsp";
+    }
+    function redirect(url, param, value) {
+        var val = value;
+        if (param == 'chartType'){
+            val = document.binomialForm.chartType.value;
+        }
+        url = removeParam(url, param);
+        if (param != null && val != null)
+            url = url + '&' + param + '=' + val;
+        if (val > 0)
+            location.href = url;
+        else
+            alert("Please choose a chart to display!");
+    }
+
+    function removeParam(url, param){
+        var index = url.indexOf(param);
+        if (index > 0){
+            var endIndex = url.indexOf('&', index);
+            if (endIndex > 0)
+                url = new String(url.substring(0, index) + url.substring(endIndex + 1));
+            else
+                url = new String(url.substring(0, index - 1));
+        }
+        return url;
+    }
+  
+    function setSelection(){
+        if(!document.getElementsByName("chartType")){
+            document.binomialForm.chartType.value = -1;
+        }
+
+        // Output message about orgs with mapping issues
+        var cookieEnabled = navigator.cookieEnabled;
+        var cookieName = "geneListAnalysis.enrichment.dataMappingIssue";        
+    }
+
+</script>
+<style type="text/css">
+    .scrollTableHead table {
+        background: buttonface;
+        empty-cells: show;
+        border-left: 1px solid buttonshadow;
+        border-right: 1px solid buttonshadow;
+        border-top: 1px solid buttonshadow;
+        border-bottom: 1px solid buttonshadow;
+
+    }
+    .scrollTableHeader {
+        background: buttonface;        
+    }
+    .scrollTableHeaderSep {
+        background: buttonface;   
+        border-left: 1px solid buttonshadow;        
+    }
+    
+    .scrollTableSep {
+        border-left: 1px solid buttonshadow;
+    }
+    .scrollTableHead td,
+    .scrollTableBody td {
+        color: windowtext;
+        font: icon;
+        padding: 4px;
+    }
+</style> 
+
+<script language="JavaScript" type="text/javascript">
+    function doSubmit () {
+        document.binomialForm.submit();
+    }
+</script>
+
+<div id="mainBody">
+
+    <span class="formtitle">Analysis Summary:  </span>Please report in publication    <a href="javascript:;" onClick="popout_window('/tips/tips_overrepresentationPub.jsp','400','400')"><img src="/images/icons/bulb.gif" border="0" alt="Tips"></a>
+    
+    
+    <form method="post" name="listMappingResults" action="/servlet/CompareToRefList"> 
+    <input type="hidden" name="numUploaded" value="1">
+    <input type="hidden" name="numRefList" value="1">
+    <input type="hidden" name="saveUserChoices" value="false">
+
+          <!--select lists section-->
+    <table cellpadding=2 cellspacing=1 border="0" width="100%">
+       <tr>
+         <td valign="top">
+          <table cellpadding="2" cellspacing="1" border="0" class="form">
+            <tr>
+                <td><b>Analysis Type:</b><span class="nobr">  PANTHER Overrepresentation Test (Released 20240807)</span></td>
+            </tr>
+            <tr>
+            <tr>
+                <td><hr size="1" noshade></td>
+            </tr>    
+                <td><b>Annotation Version and Release Date:</b>  GO Ontology database DOI:  10.5281/zenodo.12173881 Released 2024-06-17</td>
+            </tr>
+            <tr>
+                <td><hr size="1" noshade></td>
+            </tr> 
+            <tr>
+                <td colspan="2">
+                    <table width="100%">
+
+                        <tr>
+                            <td><b>Analyzed List:</b></td>
+                            <td nowrap><TABLE><TR><TD nowrap>upload_1 (Homo sapiens)</TD></TR></TABLE></td>
+                            <td  style="vertical-align:middle; white-space: nowrap;" ><a href="/tools/uploadFiles.jsp" class="buttonBlue">Change</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> <hr size="1" noshade></td>
+                        </tr> 
+                        <tr>
+                            <td><b>Reference List:</b></td>
+                            <td nowrap><TABLE><TR><TD nowrap>Homo sapiens (all genes in database)</TD></TR></TABLE></td>                        
+                            <td  nowrap align="left"><a href="javascript:uploadRefFile();" class="buttonBlue">Change  </a></td>
+                        </tr>
+                    </table>
+                </td>    
+            </tr>
+            <tr>
+                <td><hr size="1" noshade></td>
+            </tr> 
+
+
+            <tr>
+                <td style="vertical-align:middle; white-space: nowrap;" colspan="2"><b>Annotation Data Set:  </b>
+                    <select name="type" onchange="handleUserChoices()">
+                            
+                                <option  value="fullgo_bp_comp" > GO biological process complete</option>                                    
+
+                                <option  value="fullgo_mf_comp" selected> GO molecular function complete</option>                                    
+                            
+                                <option  value="fullgo_cc_comp" > GO cellular component complete</option>
+
+                            <option  value="pathway"> PANTHER Pathways</option>
+
+
+                            <option  value="panther_mf"> PANTHER GO-Slim Molecular Function</option>
+
+                            <option  value="panther_bp" > PANTHER GO-Slim Biological Process</option>
+
+                        <option  value="panther_cc" > PANTHER GO-Slim Cellular Component</option>
+
+                        <option  value="panther_pc" > PANTHER Protein Class</option>
+                            
+                                <option  value="reactome" > Reactome pathways</option>
+                    
+                    </select>&nbsp;&nbsp;<a href="javascript:;" onClick="popout_window('/tips/tips_annotationDataSets.jsp','400','400')"><img src="/images/icons/bulb.gif" border="0" alt="Tips"></a>
+                    <BR>
+                </td>
+            </tr>
+            <tr>
+                <td><hr size="1" noshade></td>
+            </tr> 
+            <tr valign="top">
+                <td style="vertical-align:middle; white-space: nowrap;" colspan="3"><b>Test Type:  </b>
+                    <input type="radio" name="testType" value="FISHER" checked onclick="handleTestType()" >Fisher's Exact&nbsp;&nbsp;
+                    <input type="radio" name="testType" value="BINOMIAL"  onclick="handleTestType()" >Binomial&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><hr size="1" noshade></td>
+            </tr>             
+            <tr valign="top">
+                <td style="vertical-align:middle; white-space: nowrap;" colspan="3"><b>Correction:  </b>
+                        <input type="radio"  name="correction" value="FDR" checked onclick="handleCorType()" >Calculate False Discovery Rate&nbsp;&nbsp;
+                        <input type="radio"  name="correction" value="BONFERRONI"  onclick="handleCorType()" >Use the Bonferroni correction for multiple testing&nbsp;&nbsp;<a href="javascript:;" onClick="popout_window('/tips/tips_bonferroni.jsp','400','400')"><img src="/images/icons/bulb.gif" border="0" alt="Tips"></a>&nbsp;&nbsp;
+                        <input type="radio"  name="correction" value="NONE"  onclick="handleCorType()" >No correction
+                </td>
+            </tr>
+
+ 
+          </table>
+         </td>
+        </tr>
+    </table>   
+    </form>
+    
+
+     
+<BR>
+    <span class="formtitle">Results</span>
+
+    <a href="javascript:;" onClick="popout_window('/tips/tips_overrep.jsp','400','400')"><img src="/images/icons/bulb.gif" border="0" alt="Tips"></a>
+    <br>
+    <form action="/tools/compareToRefList.jsp" name="binomialForm" method=post>
+
+        
+        <input type="hidden" name="sortOrder" value="-1">
+        <input type="hidden" name="sortList" value="upload_1">
+        <input type="hidden" name="sortField" value="hierarchy">
+
+        <table cellspacing=0 cellpadding="0" width="98%" border=0>
+            <tr>
+
+
+
+
+                    <table cellpadding="0" cellspacing="0" class="scrollTableHead" border="0">
+                        <span class="scrollTableHead">
+                            <tr valign="top">
+                                <td class="scrollTableHead">&nbsp;</td>
+                                <td class="scrollTableSep">Reference list</td>
+                                
+                                <td class="scrollTableSep">upload_1</td>
+                                
+
+                            </tr>
+                        </span>
+
+                        <tr valign="top" bgColor="#ffffff">
+                            
+                            <td>Uniquely Mapped IDS:</td>
+                            <td class="scrollTableSep" align="center">
+                                                                            
+                                                   <a href= "/tools/gxIdsList.do?reflist=1">20580</a> out of 20580
+
+                            </td>
+                            
+                            <td class="scrollTableSep" align="center">
+                                
+                                <a href="/tools/gxIdsList.do?list=upload_1&organism=Homo sapiens">152</a> out of 152
+                                
+                            </td>
+                            
+                        </tr>
+
+                        <tr valign="top" bgColor="#ffffff">
+                            <td>Unmapped IDs:</td>
+                            
+                            <td class="scrollTableSep" align="center">
+                                <a href="/tools/unmappedBinom.jsp?refList=1">0</a>
+                            </td>
+                            
+                            <td class="scrollTableSep" align="center"><a href="/tools/unmappedBinom.jsp?listName=upload_1">4</a></td>
+                            
+                        </tr>
+                        <tr valign="top" bgColor="#ffffff">
+                            <td >Multiple mapping information:</td>
+                            <td class="scrollTableSep" align="center">
+                                
+                                            0
+
+                            </td>
+
+                            <td class="scrollTableSep" align="center">
+
+                                            <a href="/tools/multipleMap.jsp?&listName=upload_1">0</a>
+
+                            </td>
+
+                        </tr>                        
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+        <BR>
+                
+
+
+                    Export&nbsp;&nbsp;<a href="/tools/compareToRefListTxt.jsp?sortOrder=-1&sortList=upload_1&sortField=hierarchy" class="buttonBlue">Table</a>&nbsp;&nbsp;<a href="/tools/exportCompareToRefList.jsp?sortOrder=-1&sortList=upload_1&sortField=hierarchy&format=xml" class="buttonBlue">XML with user input ids</a>&nbsp;&nbsp;<a href="/tools/exportCompareToRefList.jsp?sortOrder=-1&sortList=upload_1&sortField=hierarchy&format=json" class="buttonBlue">JSON with user input ids</a>
+
+        <br><br>
+
+                    Displaying only results for FDR P < 0.05, <a href="/tools/compareToRefList.jsp?&showAll=true">click here to display all results</a>
+
+        <BR>
+        <BR>
+
+        <table border="0" cellspacing="0" cellpadding="0" border=0>
+            <tr>
+                <td>
+
+                    <table border="0" cellspacing="1" cellpadding="4" class="scrollTableHead">
+                        <span class="scrollTableHead">
+                            <tr>
+                                <td class="scrollTableHeader" valign=top>&nbsp;</td>
+                                <td class="scrollTableHeaderSep" valign=top align="center" nowrap>
+                                                                                        
+                                                    <a href="/tools/gxIdsList.do?reflist=1">Homo sapiens</a> (REF)
+
+                                </td>
+                                
+                                    <td class="scrollTableHeaderSep" valign=top colspan=6 align="center" nowrap>
+
+                                    <a href="/tools/gxIdsList.do?list=upload_1&organism=Homo sapiens">upload_1</a> (<img src="/images/icons/sortarrowdown.gif"><a href="/tools/compareToRefList.jsp?sortOrder=1&sortList=upload_1" > Hierarchy </a>&nbsp;<font color="red">NEW!</font>&nbsp;<a href="javascript:;" onClick="popout_window('/tips/tips_overEnrich.jsp','400','400')"><img src="/images/icons/bulb.gif" border="0" alt="Tips"></a>)
+                                    
+
+                                </td>
+                                
+                                
+                                
+                            </tr>
+                        </span>    
+                            <tr>
+                                <!--categories-->
+                                <td class="scrollTableHeader" valign=top>
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=1&sortList=categories" class=boldBodyLink>GO molecular function complete</a></td>
+
+                                <!--reference list-->
+                                <td class="scrollTableHeaderSep" valign=top align=center nowrap>
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=2&sortList=Homo sapiens">#</a></td>
+                                    
+                                <td class="scrollTableHeaderSep" valign=top align=center nowrap>
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=2&sortList=upload_1&sortField=num">#</a></td>
+                                    
+                                <td class="scrollTableHeader" valign=top align=center nowrap>
+
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=2&sortList=upload_1&sortField=exp">expected</a></td>
+                                    
+                                <td class="scrollTableHeader" valign=top align=center nowrap>
+
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=2&sortList=upload_1&sortField=foldEnrich">Fold Enrichment</a></td>
+                                    
+                                <td class="scrollTableHeader" valign=top align=center nowrap>
+
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=1&sortList=upload_1&sortField=rep">+/-</a></td>
+                                    
+                                <td class="scrollTableHeader" valign=top align=center nowrap>
+
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=1&sortList=upload_1&sortField=pval">raw P value</a></td>
+                                    
+                                <td class="scrollTableHeader" valign=top align=center nowrap>
+
+                                    
+                                    <a href="/tools/compareToRefList.jsp?sortOrder=2&sortList=upload_1&sortField=fdr">FDR</a></td>
+                                    
+                            </tr>
+                        </span>
+
+                        <!--now print results-->
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0070644">vitamin D response element binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0070644&reflist=1" >
+
+                                        3</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0070644&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .02</td>
+                             <td align=center class=tools nowrap>  > 100</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.95E-07</td>
+                            
+                                <td align=center class=tools nowrap>4.89E-05</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000978">RNA polymerase II cis-regulatory region sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000978&reflist=1" >
+
+                                        1195</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000978&list=upload_1&organism=Homo sapiens">
+                                        
+                                        122</a></td>
+
+                            <td align=center class=tools nowrap> 8.83</td>
+                             <td align=center class=tools nowrap> 13.82</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.80E-123</td>
+                            
+                                <td align=center class=tools nowrap>9.62E-120</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000987">cis-regulatory region sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000987&reflist=1" >
+
+                                        1219</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000987&list=upload_1&organism=Homo sapiens">
+                                        
+                                        122</a></td>
+
+                            <td align=center class=tools nowrap> 9.00</td>
+                             <td align=center class=tools nowrap> 13.55</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>4.72E-122</td>
+                            
+                                <td align=center class=tools nowrap>7.97E-119</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000976">transcription cis-regulatory region binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000976&reflist=1" >
+
+                                        1510</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000976&list=upload_1&organism=Homo sapiens">
+                                        
+                                        128</a></td>
+
+                            <td align=center class=tools nowrap> 11.15</td>
+                             <td align=center class=tools nowrap> 11.48</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.70E-121</td>
+                            
+                                <td align=center class=tools nowrap>3.76E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001067">transcription regulatory region nucleic acid binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001067&reflist=1" >
+
+                                        1512</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001067&list=upload_1&organism=Homo sapiens">
+                                        
+                                        128</a></td>
+
+                            <td align=center class=tools nowrap> 11.17</td>
+                             <td align=center class=tools nowrap> 11.46</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>4.41E-121</td>
+                            
+                                <td align=center class=tools nowrap>3.73E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003676">nucleic acid binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003676&reflist=1" >
+
+                                        4010</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003676&list=upload_1&organism=Homo sapiens">
+                                        
+                                        146</a></td>
+
+                            <td align=center class=tools nowrap> 29.62</td>
+                             <td align=center class=tools nowrap> 4.93</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.02E-95</td>
+                            
+                                <td align=center class=tools nowrap>3.97E-93</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0097159">organic cyclic compound binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0097159&reflist=1" >
+
+                                        6040</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0097159&list=upload_1&organism=Homo sapiens">
+                                        
+                                        146</a></td>
+
+                            <td align=center class=tools nowrap> 44.61</td>
+                             <td align=center class=tools nowrap> 3.27</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.09E-69</td>
+                            
+                                <td align=center class=tools nowrap>3.44E-67</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0005488">binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0005488&reflist=1" >
+
+                                        16418</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0005488&list=upload_1&organism=Homo sapiens">
+                                        
+                                        152</a></td>
+
+                            <td align=center class=tools nowrap> 121.26</td>
+                             <td align=center class=tools nowrap> 1.25</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.93E-15</td>
+                            
+                                <td align=center class=tools nowrap>3.77E-13</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:1990837">sequence-specific double-stranded DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:1990837&reflist=1" >
+
+                                        1573</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:1990837&list=upload_1&organism=Homo sapiens">
+                                        
+                                        129</a></td>
+
+                            <td align=center class=tools nowrap> 11.62</td>
+                             <td align=center class=tools nowrap> 11.10</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.14E-120</td>
+                            
+                                <td align=center class=tools nowrap>7.22E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003690">double-stranded DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003690&reflist=1" >
+
+                                        1668</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003690&list=upload_1&organism=Homo sapiens">
+                                        
+                                        131</a></td>
+
+                            <td align=center class=tools nowrap> 12.32</td>
+                             <td align=center class=tools nowrap> 10.63</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>5.29E-121</td>
+                            
+                                <td align=center class=tools nowrap>3.83E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003677">DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003677&reflist=1" >
+
+                                        2518</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003677&list=upload_1&organism=Homo sapiens">
+                                        
+                                        143</a></td>
+
+                            <td align=center class=tools nowrap> 18.60</td>
+                             <td align=center class=tools nowrap> 7.69</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.82E-119</td>
+                            
+                                <td align=center class=tools nowrap>1.30E-116</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0043565">sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0043565&reflist=1" >
+
+                                        1684</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0043565&list=upload_1&organism=Homo sapiens">
+                                        
+                                        134</a></td>
+
+                            <td align=center class=tools nowrap> 12.44</td>
+                             <td align=center class=tools nowrap> 10.77</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.59E-126</td>
+                            
+                                <td align=center class=tools nowrap>1.82E-122</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000977">RNA polymerase II transcription regulatory region sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000977&reflist=1" >
+
+                                        1411</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000977&list=upload_1&organism=Homo sapiens">
+                                        
+                                        126</a></td>
+
+                            <td align=center class=tools nowrap> 10.42</td>
+                             <td align=center class=tools nowrap> 12.09</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.65E-121</td>
+                            
+                                <td align=center class=tools nowrap>3.36E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0140793">histone H2AXY142 phosphatase activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140793&reflist=1" >
+
+                                        3</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140793&list=upload_1&organism=Homo sapiens">
+                                        
+                                        2</a></td>
+
+                            <td align=center class=tools nowrap> .02</td>
+                             <td align=center class=tools nowrap> 90.26</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.62E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.22E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140789">histone phosphatase activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140789&reflist=1" >
+
+                                        3</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140789&list=upload_1&organism=Homo sapiens">
+                                        
+                                        2</a></td>
+
+                            <td align=center class=tools nowrap> .02</td>
+                             <td align=center class=tools nowrap> 90.26</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.62E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.21E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003824">catalytic activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003824&reflist=1" >
+
+                                        5585</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003824&list=upload_1&organism=Homo sapiens">
+                                        
+                                        15</a></td>
+
+                            <td align=center class=tools nowrap> 41.25</td>
+                             <td align=center class=tools nowrap> .36</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>1.92E-07</td>
+                            
+                                <td align=center class=tools nowrap>2.44E-05</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0016787">hydrolase activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0016787&reflist=1" >
+
+                                        2437</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0016787&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> 18.00</td>
+                             <td align=center class=tools nowrap> .22</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>7.14E-05</td>
+                            
+                                <td align=center class=tools nowrap>6.58E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140993">histone modifying activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140993&reflist=1" >
+
+                                        208</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140993&list=upload_1&organism=Homo sapiens">
+                                        
+                                        9</a></td>
+
+                            <td align=center class=tools nowrap> 1.54</td>
+                             <td align=center class=tools nowrap> 5.86</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.49E-05</td>
+                            
+                                <td align=center class=tools nowrap>2.43E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0003680">minor groove of adenine-thymine-rich DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003680&reflist=1" >
+
+                                        10</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003680&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .07</td>
+                             <td align=center class=tools nowrap> 67.70</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>5.03E-09</td>
+                            
+                                <td align=center class=tools nowrap>7.73E-07</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000217">DNA secondary structure binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000217&reflist=1" >
+
+                                        39</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000217&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .29</td>
+                             <td align=center class=tools nowrap> 17.36</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>9.67E-06</td>
+                            
+                                <td align=center class=tools nowrap>1.04E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0044323">retinoic acid-responsive element binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0044323&reflist=1" >
+
+                                        6</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0044323&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .04</td>
+                             <td align=center class=tools nowrap> 67.70</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>7.77E-06</td>
+                            
+                                <td align=center class=tools nowrap>8.76E-04</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0001093">TFIIB-class transcription factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001093&reflist=1" >
+
+                                        4</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001093&list=upload_1&organism=Homo sapiens">
+                                        
+                                        2</a></td>
+
+                            <td align=center class=tools nowrap> .03</td>
+                             <td align=center class=tools nowrap> 67.70</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.22E-04</td>
+                            
+                                <td align=center class=tools nowrap>2.18E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140296">general transcription initiation factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140296&reflist=1" >
+
+                                        53</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140296&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .39</td>
+                             <td align=center class=tools nowrap> 12.77</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>4.44E-05</td>
+                            
+                                <td align=center class=tools nowrap>4.17E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0008134">transcription factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0008134&reflist=1" >
+
+                                        600</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0008134&list=upload_1&organism=Homo sapiens">
+                                        
+                                        49</a></td>
+
+                            <td align=center class=tools nowrap> 4.43</td>
+                             <td align=center class=tools nowrap> 11.06</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.16E-37</td>
+                            
+                                <td align=center class=tools nowrap>3.45E-35</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0005515">protein binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0005515&reflist=1" >
+
+                                        14060</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0005515&list=upload_1&organism=Homo sapiens">
+                                        
+                                        135</a></td>
+
+                            <td align=center class=tools nowrap> 103.84</td>
+                             <td align=center class=tools nowrap> 1.30</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.93E-09</td>
+                            
+                                <td align=center class=tools nowrap>6.42E-07</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001099">basal RNA polymerase II transcription machinery binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001099&reflist=1" >
+
+                                        60</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001099&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .44</td>
+                             <td align=center class=tools nowrap> 11.28</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.10E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.21E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001098">basal transcription machinery binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001098&reflist=1" >
+
+                                        60</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001098&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .44</td>
+                             <td align=center class=tools nowrap> 11.28</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.10E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.08E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0071837">HMG box domain binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0071837&reflist=1" >
+
+                                        13</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0071837&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .10</td>
+                             <td align=center class=tools nowrap> 52.07</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.52E-08</td>
+                            
+                                <td align=center class=tools nowrap>3.46E-06</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0019904">protein domain specific binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0019904&reflist=1" >
+
+                                        652</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0019904&list=upload_1&organism=Homo sapiens">
+                                        
+                                        22</a></td>
+
+                            <td align=center class=tools nowrap> 4.82</td>
+                             <td align=center class=tools nowrap> 4.57</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.79E-09</td>
+                            
+                                <td align=center class=tools nowrap>4.71E-07</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0001162">RNA polymerase II intronic transcription regulatory region sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001162&reflist=1" >
+
+                                        8</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001162&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .06</td>
+                             <td align=center class=tools nowrap> 50.77</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.15E-05</td>
+                            
+                                <td align=center class=tools nowrap>2.14E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001161">intronic transcription regulatory region sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001161&reflist=1" >
+
+                                        11</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001161&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> .08</td>
+                             <td align=center class=tools nowrap> 49.23</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>9.07E-07</td>
+                            
+                                <td align=center class=tools nowrap>1.07E-04</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0034056">estrogen response element binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0034056&reflist=1" >
+
+                                        11</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0034056&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> .08</td>
+                             <td align=center class=tools nowrap> 49.23</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>9.07E-07</td>
+                            
+                                <td align=center class=tools nowrap>1.09E-04</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0035259">nuclear glucocorticoid receptor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0035259&reflist=1" >
+
+                                        12</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0035259&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .09</td>
+                             <td align=center class=tools nowrap> 33.85</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.28E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.11E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0016922">nuclear receptor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0016922&reflist=1" >
+
+                                        136</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0016922&list=upload_1&organism=Homo sapiens">
+                                        
+                                        10</a></td>
+
+                            <td align=center class=tools nowrap> 1.00</td>
+                             <td align=center class=tools nowrap> 9.96</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>6.88E-08</td>
+                            
+                                <td align=center class=tools nowrap>9.19E-06</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0061629">RNA polymerase II-specific DNA-binding transcription factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0061629&reflist=1" >
+
+                                        343</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0061629&list=upload_1&organism=Homo sapiens">
+                                        
+                                        35</a></td>
+
+                            <td align=center class=tools nowrap> 2.53</td>
+                             <td align=center class=tools nowrap> 13.82</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>5.68E-30</td>
+                            
+                                <td align=center class=tools nowrap>1.52E-27</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140297">DNA-binding transcription factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140297&reflist=1" >
+
+                                        478</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140297&list=upload_1&organism=Homo sapiens">
+                                        
+                                        40</a></td>
+
+                            <td align=center class=tools nowrap> 3.53</td>
+                             <td align=center class=tools nowrap> 11.33</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>6.50E-31</td>
+                            
+                                <td align=center class=tools nowrap>1.83E-28</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0003707">nuclear steroid receptor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003707&reflist=1" >
+
+                                        25</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003707&list=upload_1&organism=Homo sapiens">
+                                        
+                                        6</a></td>
+
+                            <td align=center class=tools nowrap> .18</td>
+                             <td align=center class=tools nowrap> 32.49</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.32E-08</td>
+                            
+                                <td align=center class=tools nowrap>3.27E-06</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0004879">nuclear receptor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0004879&reflist=1" >
+
+                                        59</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0004879&list=upload_1&organism=Homo sapiens">
+                                        
+                                        13</a></td>
+
+                            <td align=center class=tools nowrap> .44</td>
+                             <td align=center class=tools nowrap> 29.83</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.49E-16</td>
+                            
+                                <td align=center class=tools nowrap>7.70E-14</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000981">DNA-binding transcription factor activity, RNA polymerase II-specific</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000981&reflist=1" >
+
+                                        1382</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000981&list=upload_1&organism=Homo sapiens">
+                                        
+                                        125</a></td>
+
+                            <td align=center class=tools nowrap> 10.21</td>
+                             <td align=center class=tools nowrap> 12.25</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.27E-120</td>
+                            
+                                <td align=center class=tools nowrap>7.14E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003700">DNA-binding transcription factor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003700&reflist=1" >
+
+                                        1473</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003700&list=upload_1&organism=Homo sapiens">
+                                        
+                                        126</a></td>
+
+                            <td align=center class=tools nowrap> 10.88</td>
+                             <td align=center class=tools nowrap> 11.58</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>7.06E-119</td>
+                            
+                                <td align=center class=tools nowrap>2.98E-116</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140110">transcription regulator activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140110&reflist=1" >
+
+                                        1972</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140110&list=upload_1&organism=Homo sapiens">
+                                        
+                                        136</a></td>
+
+                            <td align=center class=tools nowrap> 14.56</td>
+                             <td align=center class=tools nowrap> 9.34</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.54E-120</td>
+                            
+                                <td align=center class=tools nowrap>7.82E-118</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0098531">ligand-activated transcription factor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0098531&reflist=1" >
+
+                                        60</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0098531&list=upload_1&organism=Homo sapiens">
+                                        
+                                        13</a></td>
+
+                            <td align=center class=tools nowrap> .44</td>
+                             <td align=center class=tools nowrap> 29.34</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>4.43E-16</td>
+                            
+                                <td align=center class=tools nowrap>9.36E-14</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0070888">E-box binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0070888&reflist=1" >
+
+                                        59</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0070888&list=upload_1&organism=Homo sapiens">
+                                        
+                                        14</a></td>
+
+                            <td align=center class=tools nowrap> .44</td>
+                             <td align=center class=tools nowrap> 32.13</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>7.81E-18</td>
+                            
+                                <td align=center class=tools nowrap>1.80E-15</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0070742">C2H2 zinc finger domain binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0070742&reflist=1" >
+
+                                        14</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0070742&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .10</td>
+                             <td align=center class=tools nowrap> 29.01</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.35E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.04E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0008301">DNA binding, bending</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0008301&reflist=1" >
+
+                                        19</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0008301&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> .14</td>
+                             <td align=center class=tools nowrap> 28.50</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.02E-05</td>
+                            
+                                <td align=center class=tools nowrap>1.05E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0046965">nuclear retinoid X receptor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0046965&reflist=1" >
+
+                                        17</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0046965&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .13</td>
+                             <td align=center class=tools nowrap> 23.89</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.49E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.75E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0042974">nuclear retinoic acid receptor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0042974&reflist=1" >
+
+                                        25</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0042974&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .18</td>
+                             <td align=center class=tools nowrap> 16.25</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.06E-04</td>
+                            
+                                <td align=center class=tools nowrap>4.99E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0001228">DNA-binding transcription activator activity, RNA polymerase II-specific</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001228&reflist=1" >
+
+                                        476</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001228&list=upload_1&organism=Homo sapiens">
+                                        
+                                        78</a></td>
+
+                            <td align=center class=tools nowrap> 3.52</td>
+                             <td align=center class=tools nowrap> 22.19</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.07E-87</td>
+                            
+                                <td align=center class=tools nowrap>1.04E-84</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001216">DNA-binding transcription activator activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001216&reflist=1" >
+
+                                        482</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001216&list=upload_1&organism=Homo sapiens">
+                                        
+                                        79</a></td>
+
+                            <td align=center class=tools nowrap> 3.56</td>
+                             <td align=center class=tools nowrap> 22.19</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.65E-88</td>
+                            
+                                <td align=center class=tools nowrap>5.96E-86</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0070577">lysine-acetylated histone binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0070577&reflist=1" >
+
+                                        25</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0070577&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> .18</td>
+                             <td align=center class=tools nowrap> 21.66</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.21E-05</td>
+                            
+                                <td align=center class=tools nowrap>3.07E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0140033">acetylation-dependent protein binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0140033&reflist=1" >
+
+                                        26</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0140033&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .19</td>
+                             <td align=center class=tools nowrap> 26.04</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.19E-06</td>
+                            
+                                <td align=center class=tools nowrap>1.38E-04</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0000979">RNA polymerase II core promoter sequence-specific DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000979&reflist=1" >
+
+                                        19</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000979&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .14</td>
+                             <td align=center class=tools nowrap> 21.38</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.51E-04</td>
+                            
+                                <td align=center class=tools nowrap>2.34E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0035035">histone acetyltransferase binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0035035&reflist=1" >
+
+                                        24</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0035035&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> .18</td>
+                             <td align=center class=tools nowrap> 16.92</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>7.13E-04</td>
+                            
+                                <td align=center class=tools nowrap>4.52E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0043425">bHLH transcription factor binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0043425&reflist=1" >
+
+                                        32</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0043425&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> .24</td>
+                             <td align=center class=tools nowrap> 16.92</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.76E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.40E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0001223">transcription coactivator binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001223&reflist=1" >
+
+                                        44</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001223&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .32</td>
+                             <td align=center class=tools nowrap> 15.39</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.77E-05</td>
+                            
+                                <td align=center class=tools nowrap>1.80E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001221">transcription coregulator binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001221&reflist=1" >
+
+                                        114</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001221&list=upload_1&organism=Homo sapiens">
+                                        
+                                        13</a></td>
+
+                            <td align=center class=tools nowrap> .84</td>
+                             <td align=center class=tools nowrap> 15.44</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.64E-12</td>
+                            
+                                <td align=center class=tools nowrap>4.79E-10</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0031490">chromatin DNA binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0031490&reflist=1" >
+
+                                        141</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0031490&list=upload_1&organism=Homo sapiens">
+                                        
+                                        15</a></td>
+
+                            <td align=center class=tools nowrap> 1.04</td>
+                             <td align=center class=tools nowrap> 14.40</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.45E-13</td>
+                            
+                                <td align=center class=tools nowrap>2.72E-11</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0003682">chromatin binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003682&reflist=1" >
+
+                                        624</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003682&list=upload_1&organism=Homo sapiens">
+                                        
+                                        36</a></td>
+
+                            <td align=center class=tools nowrap> 4.61</td>
+                             <td align=center class=tools nowrap> 7.81</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>3.17E-22</td>
+                            
+                                <td align=center class=tools nowrap>8.03E-20</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0044877">protein-containing complex binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0044877&reflist=1" >
+
+                                        1764</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0044877&list=upload_1&organism=Homo sapiens">
+                                        
+                                        38</a></td>
+
+                            <td align=center class=tools nowrap> 13.03</td>
+                             <td align=center class=tools nowrap> 2.92</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.17E-09</td>
+                            
+                                <td align=center class=tools nowrap>2.04E-07</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:1990841">promoter-specific chromatin binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:1990841&reflist=1" >
+
+                                        67</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:1990841&list=upload_1&organism=Homo sapiens">
+                                        
+                                        6</a></td>
+
+                            <td align=center class=tools nowrap> .49</td>
+                             <td align=center class=tools nowrap> 12.12</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.01E-05</td>
+                            
+                                <td align=center class=tools nowrap>1.07E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0001227">DNA-binding transcription repressor activity, RNA polymerase II-specific</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001227&reflist=1" >
+
+                                        264</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001227&list=upload_1&organism=Homo sapiens">
+                                        
+                                        21</a></td>
+
+                            <td align=center class=tools nowrap> 1.95</td>
+                             <td align=center class=tools nowrap> 10.77</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>5.70E-16</td>
+                            
+                                <td align=center class=tools nowrap>1.16E-13</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0001217">DNA-binding transcription repressor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0001217&reflist=1" >
+
+                                        273</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0001217&list=upload_1&organism=Homo sapiens">
+                                        
+                                        23</a></td>
+
+                            <td align=center class=tools nowrap> 2.02</td>
+                             <td align=center class=tools nowrap> 11.41</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>5.81E-18</td>
+                            
+                                <td align=center class=tools nowrap>1.40E-15</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0046332">SMAD binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0046332&reflist=1" >
+
+                                        78</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0046332&list=upload_1&organism=Homo sapiens">
+                                        
+                                        5</a></td>
+
+                            <td align=center class=tools nowrap> .58</td>
+                             <td align=center class=tools nowrap> 8.68</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>2.81E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.93E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0046982">protein heterodimerization activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0046982&reflist=1" >
+
+                                        319</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0046982&list=upload_1&organism=Homo sapiens">
+                                        
+                                        10</a></td>
+
+                            <td align=center class=tools nowrap> 2.36</td>
+                             <td align=center class=tools nowrap> 4.24</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>1.34E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.04E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0046983">protein dimerization activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0046983&reflist=1" >
+
+                                        1066</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0046983&list=upload_1&organism=Homo sapiens">
+                                        
+                                        28</a></td>
+
+                            <td align=center class=tools nowrap> 7.87</td>
+                             <td align=center class=tools nowrap> 3.56</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>4.18E-09</td>
+                            
+                                <td align=center class=tools nowrap>6.62E-07</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0008270">zinc ion binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0008270&reflist=1" >
+
+                                        851</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0008270&list=upload_1&organism=Homo sapiens">
+                                        
+                                        23</a></td>
+
+                            <td align=center class=tools nowrap> 6.29</td>
+                             <td align=center class=tools nowrap> 3.66</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>7.28E-08</td>
+                            
+                                <td align=center class=tools nowrap>9.47E-06</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0046914">transition metal ion binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0046914&reflist=1" >
+
+                                        1125</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0046914&list=upload_1&organism=Homo sapiens">
+                                        
+                                        23</a></td>
+
+                            <td align=center class=tools nowrap> 8.31</td>
+                             <td align=center class=tools nowrap> 2.77</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>8.73E-06</td>
+                            
+                                <td align=center class=tools nowrap>9.63E-04</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0003712">transcription coregulator activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0003712&reflist=1" >
+
+                                        504</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0003712&list=upload_1&organism=Homo sapiens">
+                                        
+                                        13</a></td>
+
+                            <td align=center class=tools nowrap> 3.72</td>
+                             <td align=center class=tools nowrap> 3.49</td>
+                            <td align=center class=tools nowrap>+</td>
+                            <td align=center class=tools nowrap>9.69E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.80E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0032555">purine ribonucleotide binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0032555&reflist=1" >
+
+                                        1892</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0032555&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 13.97</td>
+                             <td align=center class=tools nowrap> .21</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>5.86E-04</td>
+                            
+                                <td align=center class=tools nowrap>3.81E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0017076">purine nucleotide binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0017076&reflist=1" >
+
+                                        1985</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0017076&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 14.66</td>
+                             <td align=center class=tools nowrap> .20</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>2.78E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.93E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0000166">nucleotide binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0000166&reflist=1" >
+
+                                        2150</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0000166&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 15.88</td>
+                             <td align=center class=tools nowrap> .19</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>8.92E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.29E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:1901363">heterocyclic compound binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:1901363&reflist=1" >
+
+                                        2285</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:1901363&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> 16.88</td>
+                             <td align=center class=tools nowrap> .24</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>2.22E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.59E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:1901265">nucleoside phosphate binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:1901265&reflist=1" >
+
+                                        2151</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:1901265&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 15.89</td>
+                             <td align=center class=tools nowrap> .19</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>8.91E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.41E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0032553">ribonucleotide binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0032553&reflist=1" >
+
+                                        1909</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0032553&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 14.10</td>
+                             <td align=center class=tools nowrap> .21</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>5.99E-04</td>
+                            
+                                <td align=center class=tools nowrap>3.84E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0097367">carbohydrate derivative binding</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0097367&reflist=1" >
+
+                                        2270</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0097367&list=upload_1&organism=Homo sapiens">
+                                        
+                                        4</a></td>
+
+                            <td align=center class=tools nowrap> 16.77</td>
+                             <td align=center class=tools nowrap> .24</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>2.19E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.59E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0004888">transmembrane signaling receptor activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0004888&reflist=1" >
+
+                                        1322</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0004888&list=upload_1&organism=Homo sapiens">
+                                        
+                                        1</a></td>
+
+                            <td align=center class=tools nowrap> 9.76</td>
+                             <td align=center class=tools nowrap> .10</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>7.47E-04</td>
+                            
+                                <td align=center class=tools nowrap>4.68E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0022857">transmembrane transporter activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0022857&reflist=1" >
+
+                                        1128</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0022857&list=upload_1&organism=Homo sapiens">
+                                        
+                                        0</a></td>
+
+                            <td align=center class=tools nowrap> 8.33</td>
+                             <td align=center class=tools nowrap>  < 0.01</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>4.31E-04</td>
+                            
+                                <td align=center class=tools nowrap>2.84E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0005215">transporter activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0005215&reflist=1" >
+
+                                        1240</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0005215&list=upload_1&organism=Homo sapiens">
+                                        
+                                        0</a></td>
+
+                            <td align=center class=tools nowrap> 9.16</td>
+                             <td align=center class=tools nowrap>  < 0.01</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>1.93E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.42E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <a href="http://amigo.geneontology.org/amigo/term/GO:0030234">enzyme regulator activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0030234&reflist=1" >
+
+                                        1325</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0030234&list=upload_1&organism=Homo sapiens">
+                                        
+                                        0</a></td>
+
+                            <td align=center class=tools nowrap> 9.79</td>
+                             <td align=center class=tools nowrap>  < 0.01</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>7.86E-05</td>
+                            
+                                <td align=center class=tools nowrap>7.12E-03</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#ffffff">
+                            <td class=fixHeader nowrap>
+                                
+                                <img height="16" width="16" src="/images/spacer.gif"><img src="/images/icons/tree_node.gif"><a href="http://amigo.geneontology.org/amigo/term/GO:0098772">molecular function regulator activity</a>
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=GO:0098772&reflist=1" >
+
+                                        2112</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=GO:0098772&list=upload_1&organism=Homo sapiens">
+                                        
+                                        3</a></td>
+
+                            <td align=center class=tools nowrap> 15.60</td>
+                             <td align=center class=tools nowrap> .19</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>1.31E-04</td>
+                            
+                                <td align=center class=tools nowrap>1.04E-02</td>
+
+                        </tr>
+                        
+                        <tr bgcolor="#efefef">
+                            <td class=fixHeader nowrap>
+                                
+                                Unclassified
+                                
+                            </td>
+                            <!--ref list-- link depending on if uploaded or from workspace-->
+                            <td class="scrollTableSep" align=center nowrap>
+                                                                            
+                                                                            <a href= "/tools/gxIdsList.do?acc=UNCLASSIFIED&reflist=1" >
+
+                                        2382</a></td>
+
+                            
+                            <td align=center class=scrollTableSep nowrap>
+                                
+                                    <a href="/tools/gxIdsList.do?acc=UNCLASSIFIED&list=upload_1&organism=Homo sapiens">
+                                        
+                                        0</a></td>
+
+                            <td align=center class=tools nowrap> 17.59</td>
+                             <td align=center class=tools nowrap>  < 0.01</td>
+                            <td align=center class=tools nowrap>-</td>
+                            <td align=center class=tools nowrap>1.19E-08</td>
+                            
+                                <td align=center class=tools nowrap>1.72E-06</td>
+
+                        </tr>
+                        
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+        <br><br>
+    </form>
+                        
+</div>
+
+    
+<!-- Page Footer begins here -->
+<div id="footer">
+<table width="915" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td align="center">
+        <span class="legal">
+          <DIV style=" padding: 0px 5px 0px 5px;text-align:center;vertical-align:middle;">
+            <a href="/about.jsp">About</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/releaseInfo.jsp">Release Information</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="/feedback.jsp">Contact Us</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="/systemRequirements.jsp">System Requirements</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="/terms/privacyPolicy.jsp">Privacy Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="/terms/disclaimer.jsp">Disclaimer</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/PANTHER_DB" target="blank"><img src="/images/logos/2021 Twitter logo - blue.png" border=0 width="25" height="25" style="padding:0px 0px 0px 5px;;vertical-align: middle;"></a>
+            <a href="http://geneontology.org/" target="_top"><img src="/images/logos/go-logo.mini.png" border=0 style="padding: 0px 5px 0px 5px;vertical-align: middle;border:0px"></a>
+            <a href="https://globalbiodata.org/scientific-activities/global-core-biodata-resources" target="_top"><img src="/images/logos/GCBR-Logo-RGB.svg" border=0 width="94px" height="40px" style="vertical-align: middle;border:0px"></a>
+          </DIV>
+        </span>
+    </td>
+  </TR>   
+  <TR>
+    <td align="center">
+        <span class="legal"> &copy;&nbsp;Copyright&nbsp;2024&nbsp;Paul Thomas&nbsp;All&nbsp;Rights&nbsp;Reserved.</span>    
+    </td>
+  </TR>   
+</table>
+<br>
+<!-- Page Footer ends here -->
+</td></tr></table>
+        <script language="JavaScript" type="text/javascript">
+            if (null === window.name || undefined === window.name) {
+                window.name="panthermain";
+            }   
+        </script>
+        <script language="JavaScript" type="text/javascript" src="/js/popout_window.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/cookie.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/pubPantherCommon.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/pathway.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/quicksearch.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/registration.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/js/subscription.js"></script>
+        
+
+</div>  <!-- footer div-->
+</body>
+</html>
+
+
+

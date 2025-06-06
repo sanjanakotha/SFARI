@@ -6,4 +6,5 @@ soto_analysis/raw_files*
 soto_analysis/output*
 data/K562_encode_rna_expression_report_2023_7_26_21h_21m.tsv
 data
-output
+output/PADDLE_noSS_SFARI_Variants_output.csv
+
