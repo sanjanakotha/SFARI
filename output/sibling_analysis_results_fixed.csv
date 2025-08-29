@@ -1,0 +1,24 @@
+gene-symbol,all_proband AD_vs_DBD_sig,all_proband AD_vs_IDR_sig,all_proband AD_vs_TF_sig,all_sibling AD_vs_DBD_sig,all_sibling AD_vs_IDR_sig,all_sibling AD_vs_TF_sig,proband_only AD_vs_DBD_sig,proband_only AD_vs_IDR_sig,proband_only AD_vs_TF_sig,sibling_only AD_vs_DBD_sig,sibling_only AD_vs_IDR_sig,sibling_only AD_vs_TF_sig,hit_count,cc
+MEIS2,True,False,True,True,False,True,True,False,False,False,False,False,5,True
+MTF1,True,False,True,True,False,False,True,False,False,False,False,False,4,False
+RORA,False,True,True,False,False,False,False,True,True,False,False,False,4,False
+CASZ1,True,False,True,False,False,False,True,False,True,False,False,False,4,False
+PAX6,True,False,True,True,False,True,False,False,False,False,False,False,4,True
+MYT1L,True,False,False,True,False,False,True,False,False,False,False,False,3,False
+YY1,True,False,True,False,False,False,True,False,False,False,False,False,3,False
+HIVEP3,True,False,False,True,False,True,False,False,False,False,False,False,3,False
+ARX,True,False,False,False,False,False,True,False,False,False,False,False,2,False
+NR4A2,False,True,True,False,False,False,False,False,False,False,False,False,2,True
+PAX5,True,False,False,False,False,False,True,False,False,False,False,False,2,True
+ERG,True,False,False,False,False,False,True,False,False,False,False,False,2,True
+PITX1,True,False,False,False,False,False,True,False,False,False,False,False,2,True
+TFE3,True,False,True,False,False,False,False,False,False,False,False,False,2,False
+IKZF1,True,False,False,False,False,False,False,False,False,False,False,False,1,True
+KLF16,True,False,False,False,False,False,False,False,False,False,False,False,1,False
+KLF7,True,False,False,False,False,False,False,False,False,False,False,False,1,False
+GLIS1,True,False,False,False,False,False,False,False,False,False,False,False,1,False
+NKX2-2,True,False,False,False,False,False,False,False,False,False,False,False,1,True
+OTX1,False,False,False,False,False,False,True,False,False,False,False,False,1,False
+CAMTA2,True,False,False,False,False,False,False,False,False,False,False,False,1,True
+SRCAP,False,True,False,False,False,False,False,False,False,False,False,False,1,False
+ARNT2,True,False,False,False,False,False,False,False,False,False,False,False,1,False

@@ -17,11 +17,11 @@ directory = "../outputs/mutations/cds_bed_format"
 files = os.listdir(directory)
 
 import sys
-with open("../outputs/all_TFs_table_proteins.txt") as f1:
+with open("../soto_analysis/outputs/all_TFs_table_proteins_with_IDR.txt") as f1:
     f1.readline()
     for line in f1:
         line = line.rstrip().split("\t")
-        tf, dbd_coords, ad_coords, rd_coords, bif_coords, length = line[3], line[6].split(","), line[7].split(","), line[8].split(","), line[9].split(","), len(line[-1])
+        tf, dbd_coords, ad_coords, rd_coords, bif_coords, length, idr_coords = line[3], line[6].split(","), line[7].split(","), line[8].split(","), line[9].split(","), len(line[-2]), line[11].split(',')
         
         if tf == "Q15583-2":
             continue
@@ -33,7 +33,7 @@ with open("../outputs/all_TFs_table_proteins.txt") as f1:
         else:
             
             # Get coordinates of domains
-            dbd_dom, ad_dom, rd_dom, bif_dom = [], [], [], []
+            dbd_dom, ad_dom, rd_dom, bif_dom, idr_dom = [], [], [], [], []
     
             if dbd_coords != ["NA-NA"]:
                 for coord in dbd_coords:
@@ -55,8 +55,13 @@ with open("../outputs/all_TFs_table_proteins.txt") as f1:
                     coord = coord.split("-")
                     start, end = int(coord[0]), int(coord[1])
                     bif_dom.append((start, end))
-    
-            all_doms = {"DBD": dbd_dom, "AD": ad_dom, "RD": rd_dom, "Bif": bif_dom}
+            if idr_coords != [""]:
+                for coord in idr_coords:
+                    coord = coord.split("-")
+                    start, end = int(coord[0]), int(coord[1])
+                    idr_dom.append((start, end))
+
+            all_doms = {"DBD": dbd_dom, "AD": ad_dom, "RD": rd_dom, "Bif": bif_dom, "IDR": idr_dom}
     
             
             with open("../outputs/mutations/cds_bed_format/" + enst) as f2:

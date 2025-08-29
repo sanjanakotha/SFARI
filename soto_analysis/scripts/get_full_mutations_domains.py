@@ -23,7 +23,6 @@ else:
 files = os.listdir(d_domains)
 # -
 
-
 #SK 
 import pandas as pd
 # uniprotID_ENST_mapping = pd.read_csv("../../data/SFARI_TFs_with_ENST_corrected.csv")
@@ -31,8 +30,6 @@ uniprotID_ENST_mapping = pd.read_csv("../outputs/all_TFs_table_proteins.txt", se
 uniprotID_ENST_mapping = uniprotID_ENST_mapping[["uniprotID", "ENST"]]
 uniprotID_ENST_mapping["ENST"] = uniprotID_ENST_mapping["ENST"].str.split(".").str[0]
 uniprotID_ENST_mapping_dict= dict(zip(uniprotID_ENST_mapping["uniprotID"], uniprotID_ENST_mapping["ENST"]))
-#uniprotID_ENST_mapping_dict['O60479'] = 'ENST00000434704'
-uniprotID_ENST_mapping_dict
 
                                     
 i = 1

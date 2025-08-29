@@ -1,12 +1,9 @@
-from Bio.Seq import Seq
-from Bio import SeqIO
-#from Bio.Alphabet import IUPAC
-import sys
-# import pyensembl
 import os
-#https://towardsdatascience.com/a-simple-guide-to-command-line-arguments-with-argparse-6824c30ab1c3
 import argparse
 import pickle
+from Bio.Seq import Seq
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--variants_filename', type=str, required=True)
@@ -57,152 +54,162 @@ proteins = pickle.load(open('../raw_files/proteins.dat', 'rb'))
 dna_transcripts = pickle.load(open('../raw_files/dna_transcripts.dat', 'rb'))
 
 
-count = 1
-for file in files:
+def process_file(file):
     #if "ENST00000367264" in file:
     if ".ipynb" not in file:
-        print(count, file)
-        count += 1
-        with open(directory +  "/" + file) as f1, open(o_directory + "/" + file, "w") as o1:
-            
-            print_count = 0 # SK
-    
-            enter = True
-            
-            # SK: Reading in the variants from the bed file
-            for line in f1:
-                    #if enter:
-                        # SK: Read in strand and mutated nucleotide
-                    line = line.rstrip().split("\t")
-                    #print(line)
-                    
-                    strand = line[4]
-                        
-                    # mut_nt = line[-4]
-                    mut_nt = line[-2]
-                    
-                    # SK: Check that SNP
-                    if len(mut_nt) != 1:
-                        continue
-                    if len(line[-3]) != 1:
-                        continue
-                    if mut_nt == ".":
-                        continue
+        try:
+            with open(directory +  "/" + file) as f1, open(o_directory + "/" + file, "w") as o1:
+                
+                print_count = 0 # SK
         
-                    # SK: Not sure if this should be zero or one indexed, assuming one
-                    # SK 10/25: running into an indexing issue.. not sure why 
-                    mut_pos = int(line[-4])
-                    # note = line[9].split(";")[1].split('"')
-                    # note = line[-1]
-                    enst = line[3]
-                    # name = file.split("_")[0]
-                    name = line[3]
-                    
-                    # SK: Reading in the sorted cds genomic coordinates
-                    list_coords = []
-                    with open("../outputs/mutations/cds_bed_format/sorted/" + name + ".bed") as f2:
+                enter = True
+                
+                # SK: Reading in the variants from the bed file
+                for line in f1:
+                        #if enter:
+                            # SK: Read in strand and mutated nucleotide
+                        line = line.rstrip().split("\t")
+                        #print(line)
                         
-                        # SK: Iterate through exons in bed file, append tuples of coords to list_coords
-                        for linex in f2:
-                            linex = linex.rstrip().split("\t")
-                            #print(linex)
-                            start, end = int(linex[1]), int(linex[2])
-                            #print(start)
-                            #print(end)
-                            list_coords.append((start+1, end)) # SK: Bed file -> One-indexed coordinates now
+                        strand = line[4]
                             
-                    # SK: Reverse list_coords if on negative strand and reverse translate mutant nucleotide
-    
-                    if strand == "-" or strand == "-1" or strand == -1:
-                        list_coords.reverse()
-                        mut_nt = reverse[mut_nt]
-                    
-                    # SK: Get DNA transcript and protein sequence of protein
-                    nt_seq, translation = dna_transcripts[enst], proteins[enst]
-                    #print(nt_seq + "\n\n" + translation)
+                        # mut_nt = line[-4]
+                        mut_nt = line[-2]
+                        
+                        # SK: Check that SNP
+                        if len(mut_nt) != 1:
+                            continue
+                        if len(line[-3]) != 1:
+                            continue
+                        if mut_nt == ".":
+                            continue
+            
+                        # SK: Not sure if this should be zero or one indexed, assuming one
+                        # SK 10/25: running into an indexing issue.. not sure why 
+                        mut_pos = int(line[-4])
+                        # note = line[9].split(";")[1].split('"')
+                        # note = line[-1]
+                        enst = line[3]
+                        # name = file.split("_")[0]
+                        name = line[3]
+                        
+                        # SK: Reading in the sorted cds genomic coordinates
+                        list_coords = []
+                        with open("../outputs/mutations/cds_bed_format/sorted/" + name + ".bed") as f2:
+                            
+                            # SK: Iterate through exons in bed file, append tuples of coords to list_coords
+                            for linex in f2:
+                                linex = linex.rstrip().split("\t")
+                                #print(linex)
+                                start, end = int(linex[1]), int(linex[2])
+                                #print(start)
+                                #print(end)
+                                list_coords.append((start+1, end)) # SK: Bed file -> One-indexed coordinates now
+                                
+                        # SK: Reverse list_coords if on negative strand and reverse translate mutant nucleotide
         
-                    # Create a list of coords
-                    total_coords = []
-                    # SK: Append all individual coordinates in order to total_coords
-                    for start, end in list_coords:
                         if strand == "-" or strand == "-1" or strand == -1:
-                            total_coords += list(range(end, start - 1, -1))
-                 
-                        else:
-                            total_coords += list(range(start, end + 1))
-    
-    
-        
-                    # # SK: dictionary of ith total coordinate to the ith nt_seq
-                    # print()
-                    # print(list_coords)
+                            list_coords.reverse()
+                            mut_nt = reverse[mut_nt]
+                        
+                        # SK: Get DNA transcript and protein sequence of protein
+                        nt_seq, translation = dna_transcripts[enst], proteins[enst]
+                        #print(nt_seq + "\n\n" + translation)
+            
+                        # Create a list of coords
+                        total_coords = []
+                        # SK: Append all individual coordinates in order to total_coords
+                        for start, end in list_coords:
+                            if strand == "-" or strand == "-1" or strand == -1:
+                                total_coords += list(range(end, start - 1, -1))
                     
-                    # print()
-                    # print(total_coords[:5])
-                    
-                    pos_nt = {} # 1500: A-T-C-G
-                    for i in range(len(total_coords)):
-                        if i >= len(nt_seq):
-                            print(i)
-                            print(nt_seq)
-                            print(total_coords[i])
-                            print(list_coords)
-                        pos_nt[total_coords[i]] = nt_seq[i]
+                            else:
+                                total_coords += list(range(start, end + 1))
         
-                    # SK: Breaking total nt coordinates into total codon coordinates
-                    start = 0
-                    aa_codon = {} # 300 : [500, 520, 521]
-                    for i in range(int(len(total_coords)/3)):
-                        aa_codon[i+1] = total_coords[start:start+3]
-                        start += 3
         
-                    # SK: 
-                    codon = []
-                    for k, v in aa_codon.items():
-                        if mut_pos in v:
-                            aa_pos = k
-                            codon = v
-                            break
-                            
-                    # WT codon
-                    wt_dict = {} # pos1:nt1, pos2:nt2, pos3:nt3
-                    for pos in codon:
-                        wt_dict[pos] = pos_nt[pos]
+            
+                        # # SK: dictionary of ith total coordinate to the ith nt_seq
+                        # print()
+                        # print(list_coords)
+                        
+                        # print()
+                        # print(total_coords[:5])
+                        
+                        pos_nt = {} # 1500: A-T-C-G
+                        for i in range(len(total_coords)):
+                            if i >= len(nt_seq):
+                                print(i)
+                                print(nt_seq)
+                                print(total_coords[i])
+                                print(list_coords)
+                            pos_nt[total_coords[i]] = nt_seq[i]
+            
+                        # SK: Breaking total nt coordinates into total codon coordinates
+                        start = 0
+                        aa_codon = {} # 300 : [500, 520, 521]
+                        for i in range(int(len(total_coords)/3)):
+                            aa_codon[i+1] = total_coords[start:start+3]
+                            start += 3
+            
+                        # SK: 
+                        codon = []
+                        for k, v in aa_codon.items():
+                            if mut_pos in v:
+                                aa_pos = k
+                                codon = v
+                                break
+                                
+                        # WT codon
+                        wt_dict = {} # pos1:nt1, pos2:nt2, pos3:nt3
+                        for pos in codon:
+                            wt_dict[pos] = pos_nt[pos]
+            
+                        # Mutated codon
+                        mt_dict = dict(wt_dict)
+                        mt_dict[mut_pos] = mut_nt # pos1:nt1, pos2:nt2, pos3:nt3
+            
+                        # print(wt_dict)
+                        # print(mt_dict)
+            
+                        # To String
+                        wt_str = ""
+                        for nt in wt_dict.values():
+                            wt_str += nt
+                        mt_str = ""
+                        for nt in mt_dict.values():
+                            mt_str += nt
         
-                    # Mutated codon
-                    mt_dict = dict(wt_dict)
-                    mt_dict[mut_pos] = mut_nt # pos1:nt1, pos2:nt2, pos3:nt3
+                        # print()
+                        # print(wt_str)
+                        # print(mt_str)
+            
+                        wt_aa, mt_aa = Seq(wt_str).translate(), Seq(mt_str).translate()
+                        # print(wt_aa)
+                        # print(mt_aa)
+                        
+                        line.append(str(wt_aa))
+                        line.append(str(mt_aa))
+                        if wt_aa == mt_aa:
+                            line.append("Syn")
+                        elif wt_aa != mt_aa and mt_aa != "*":
+                            line.append("No-Syn")
+                        elif wt_aa != mt_aa and mt_aa == "*":
+                            line.append("NoSense")
+                        o1.write("\t".join(line) + "\n")
         
-                    # print(wt_dict)
-                    # print(mt_dict)
+                        #enter = False
         
-                    # To String
-                    wt_str = ""
-                    for nt in wt_dict.values():
-                        wt_str += nt
-                    mt_str = ""
-                    for nt in mt_dict.values():
-                        mt_str += nt
-    
-                    # print()
-                    # print(wt_str)
-                    # print(mt_str)
-        
-                    wt_aa, mt_aa = Seq(wt_str).translate(), Seq(mt_str).translate()
-                    # print(wt_aa)
-                    # print(mt_aa)
-                    
-                    line.append(str(wt_aa))
-                    line.append(str(mt_aa))
-                    if wt_aa == mt_aa:
-                        line.append("Syn")
-                    elif wt_aa != mt_aa and mt_aa != "*":
-                        line.append("No-Syn")
-                    elif wt_aa != mt_aa and mt_aa == "*":
-                        line.append("NoSense")
-                    o1.write("\t".join(line) + "\n")
-    
-                    #enter = False
+        except Exception as e:
+            return file, f"error: {str(e)}"
+
+results = []
+with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(process_file, f): f for f in files}
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Classifying:"):
+            result = future.result()
+            if result is not None:
+                print(result)
+
 
 #print(total_coords)
             
